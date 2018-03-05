@@ -21,7 +21,9 @@ public class Tray {
     }
 
     public void addItem(Product product) {
-        stock.add(product);
+        if (getStockLevel() < capacity) {
+            stock.add(product);
+        }
     }
 
     public Product ejectProduct() {
