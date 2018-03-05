@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class MachineFloatTest {
 
     private MachineFloat machineFloat;
+    HashMap<Coins, Integer> bank;
 
 
     @Before
@@ -20,7 +21,7 @@ public class MachineFloatTest {
         bank.put(Coins.TWENTY, 5);
         bank.put(Coins.TEN, 5);
 
-    //Can this be done in a for loop?
+        //Can this be done in a for loop?
     }
 
     //Test Float has money
@@ -34,7 +35,7 @@ public class MachineFloatTest {
 
     @Test
     public void testFloatTotal() {
-        assertEquals(19.0, bank.getFloatTotal());
+        assertEquals(19.0, bank.getFloatTotal(), 0.01);
     }
 
 
