@@ -19,4 +19,8 @@ public class Tray {
     public int getStockLevel() {
         return stock.size();
     }
+
+    public void addItem(Product product) {
+        stock.add(product);
+    }
 }

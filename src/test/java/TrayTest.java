@@ -22,6 +22,13 @@ public class TrayTest {
         assertEquals(0, tray.getStockLevel());
     }
 
+    @Test
+    public void testCanAddItem() {
+        Drink drink = new Drink("Ice Tea", 500);
+        tray.addItem(drink);
+        assertEquals(1, tray.getStockLevel());
+    }
+
     //check trays have a price
     //check tray stock
     //check we can add an item to a tray
