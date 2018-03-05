@@ -9,9 +9,14 @@ public class Tray {
     public Tray(double price, int capacity) {
         this.price = price;
         this.capacity = capacity;
+        this.stock = new ArrayList<>();
     }
 
     public double getPrice() {
         return price;
+    }
+
+    public int getStockLevel() {
+        return stock.size();
     }
 }
