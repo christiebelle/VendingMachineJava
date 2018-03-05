@@ -14,7 +14,7 @@ public class TrayTest {
 
     @Test
     public void testTrayPrice() {
-        assertEquals(0.50, tray.getPrice());
+        assertEquals(0.50, tray.getPrice(), 0.01);
     }
 
     //check trays have a price
