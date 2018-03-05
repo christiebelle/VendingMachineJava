@@ -14,6 +14,6 @@ public class DrinkTest {
 
     @Test
     public void testGetName() {
-        assertEquals("Pepsi", drink.getName);
+        assertEquals("Pepsi", drink.getName());
     }
 }
