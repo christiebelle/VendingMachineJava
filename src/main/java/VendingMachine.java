@@ -32,4 +32,8 @@ public class VendingMachine {
         //return that amount back out of the function
         return refundAmount;
     }
+
+    public int getStockLevelForTray(Selection selection) {
+        products.get(selection).getStockLevel();
+    }
 }

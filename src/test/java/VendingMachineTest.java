@@ -43,4 +43,21 @@ public class VendingMachineTest {
         assertEquals(10.00, vendingMachine.getCash(), 0.01);
         assertEquals(1.50, refunded, 0.01);
     }
+
+    @Test
+    public void testStockLevelOfTray() {
+        assertEquals(5, vendingMachine.getStockLevelForTray(Selection.A1));
+    }
+
+
+    //    @Test
+//    public void testVendWithChange() {
+//        //check stock inventory on tray goes down
+//        //check credit sets to zero
+//        //check credit amount adds to cash
+//        //check item is returned
+//        Product product = vendingMachine.vend(Selection.A1);
+//
+//        assertEquals(4, tray.);
+//    }
 }
