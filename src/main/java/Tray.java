@@ -23,4 +23,8 @@ public class Tray {
     public void addItem(Product product) {
         stock.add(product);
     }
+
+    public Product ejectProduct() {
+        return this.stock.remove(0);
+    }
 }
