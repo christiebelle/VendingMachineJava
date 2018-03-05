@@ -21,4 +21,9 @@ public class CustomerTest {
     public void testHasCash() {
         assertEquals(10.00, customer.getCash(), 0.01);
     }
+
+    @Test
+    public void testEmptyInventory() {
+        assertEquals(0, customer.getInventorySize());
+    }
 }
