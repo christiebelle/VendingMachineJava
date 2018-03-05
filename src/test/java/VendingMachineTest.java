@@ -51,17 +51,27 @@ public class VendingMachineTest {
 
 
     @Test
-    public void testVendWithChange() {
+    public void testVend() {
         //check stock inventory on tray goes down
         //check credit sets to zero
         //check credit amount adds to cash
         //check item is returned
+        vendingMachine.addMoney(0.50);
         Product product = vendingMachine.vend(Selection.A1);
 
         assertEquals(4, vendingMachine.getStockLevelForTray(Selection.A1));
         assertEquals(10.50, vendingMachine.getCash(), 0.01);
         assertEquals(00.00, vendingMachine.getCredit(), 0.01);
-        assert(product instanceof Sweet);
+        assert(product instanceof Product);
+    }
 
+    @Test
+    public void testCustomersRetainsCreditWhenOutOfStock() {
+        vendingMachine.addMoney(10.00);
+
+        for(int i = 0; i < 5; i ++){
+            vendingMachine.vend(Selection.A1);
+        }
+        assertEquals(7.50, vendingMachine.getCredit(), 0.01);
     }
 }
