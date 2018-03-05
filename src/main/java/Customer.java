@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Customer {
 
     private final String name;
-    private final int cash;
+    private final double cash;
     private ArrayList<Product> inventory;
 
     public Customer(String name, double cash) {
@@ -12,4 +12,11 @@ public class Customer {
         this.inventory = new ArrayList<Product>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getCash() {
+        return cash;
+    }
 }
